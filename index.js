@@ -4,12 +4,17 @@ const fs = require("fs");
 const low = require("lowdb")
 const FileSync = require("lowdb/adapters/FileSync")
 
-module.exports = function getLowdb(dbPath, defaults = {}) {
+module.exports = function getLowdb(dbPath, defaults = {}, isFullPath = false) {
+  if (!defaults) defaults = {};
+
   let separated = dbPath.split("/");
   let name = separated.pop();
   let joined = separated.join("/");
 
-  let dirPath = path.join(__dirname, joined);
+  let dirPath;
+  if (isFullPath) dirPath = path.join(joined);
+  else path.join(__dirname, "../..", joined);
+
   let fullPath = path.join(dirPath, name + ".json");
 
   try {

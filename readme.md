@@ -14,6 +14,12 @@ db("data/db/people")
   .get("members")
   .push({name: "Bob", age: 21})
   .write()
+
+// store in data/config.json
+// with default values if file doesn't exist
+db("data/config", {a: 234, b: 5})
+  .get("a")
+  .value() // 234
 ```
 
 For more info on how to use it, check [lowdb](https://www.npmjs.com/package/lowdb)!
