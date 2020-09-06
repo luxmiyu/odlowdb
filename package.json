@@ -1,12 +1,25 @@
 {
   "name": "odlowdb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "on demand lowdb",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "lowdb",
+    "json",
+    "database",
+    "multiple",
+    "databases",
+    "storage",
+    "persistent",
+    "file",
+    "lodash",
+    "flat",
+    "lux",
+    "luxmiyu"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {

@@ -1,5 +1,5 @@
 # On Demand Lowdb
-Very simple wrapper for [lowdb](https://www.npmjs.com/package/lowdb). It lets you create and access multiple `.json` files using lowdb on the fly.
+Very simple wrapper for [lowdb](https://www.npmjs.com/package/lowdb). It lets you create and access multiple `.json` files on the fly with lowdb.
 
 - Simple and clean syntax.
 - Automatically creates files/folders for you.
@@ -14,7 +14,9 @@ db("data/db/people")
   .get("members")
   .push({name: "Bob", age: 21})
   .write()
-
+```
+## Default values and absolute paths
+```js
 // store default values if file doesn't exist
 db("data/config", {a: 234, b: 5})
   .get("a")

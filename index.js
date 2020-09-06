@@ -5,6 +5,7 @@ const low = require("lowdb")
 const FileSync = require("lowdb/adapters/FileSync")
 
 module.exports = function getLowdb(dbPath, defaults = {}, isFullPath = false) {
+  if (!dbPath) return console.error("Missing database path.");
   if (!defaults) defaults = {};
 
   let separated = dbPath.split("/");
