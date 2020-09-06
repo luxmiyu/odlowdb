@@ -15,11 +15,16 @@ db("data/db/people")
   .push({name: "Bob", age: 21})
   .write()
 
-// store in data/config.json
-// with default values if file doesn't exist
+// store default values if file doesn't exist
 db("data/config", {a: 234, b: 5})
   .get("a")
   .value() // 234
+
+// absolute pathing data/test.json
+let absPath = path.join(__dirname, "data/test");
+db(absPath, null, true)
+  .set("someValue", "hello world")
+  .write()
 ```
 
 For more info on how to use it, check [lowdb](https://www.npmjs.com/package/lowdb)!

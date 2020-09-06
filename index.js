@@ -13,7 +13,7 @@ module.exports = function getLowdb(dbPath, defaults = {}, isFullPath = false) {
 
   let dirPath;
   if (isFullPath) dirPath = path.join(joined);
-  else path.join(__dirname, "../..", joined);
+  else dirPath = path.join(__dirname, "../..", joined);
 
   let fullPath = path.join(dirPath, name + ".json");
 
