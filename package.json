@@ -1,6 +1,6 @@
 {
   "name": "odlowdb",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "on demand lowdb",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "mkdirp": "^1.0.4"
   }
 }

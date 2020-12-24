@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const mkdirp = require("mkdirp");
 
 const low = require("lowdb")
 const FileSync = require("lowdb/adapters/FileSync")
@@ -20,9 +21,7 @@ module.exports = function getLowdb(dbPath, defaults = {}, isFullPath = false) {
 
   try {
     if (!fs.existsSync(fullPath)) {
-      fs.mkdir(dirPath, { recursive: true }, (err) => {
-        if (err) throw err;
-      });
+      mkdirp(dirPath);
 
       fs.writeFileSync(fullPath, JSON.stringify(defaults, null, 2));
     }
