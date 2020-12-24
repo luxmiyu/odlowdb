@@ -21,7 +21,7 @@ module.exports = function getLowdb(dbPath, defaults = {}, isFullPath = false) {
 
   try {
     if (!fs.existsSync(fullPath)) {
-      await mkdirp(dirPath);
+      mkdirp.sync(dirPath);
 
       fs.writeFileSync(fullPath, JSON.stringify(defaults, null, 2));
     }
