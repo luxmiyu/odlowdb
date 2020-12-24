@@ -1,6 +1,6 @@
 {
   "name": "odlowdb",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "on demand lowdb",
   "main": "index.js",
   "scripts": {
